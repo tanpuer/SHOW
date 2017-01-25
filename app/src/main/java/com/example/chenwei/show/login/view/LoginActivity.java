@@ -14,6 +14,7 @@ import com.example.chenwei.show.MainActivity;
 import com.example.chenwei.show.R;
 import com.example.chenwei.show.login.model.User;
 import com.example.chenwei.show.login.presenter.LoginPresenter;
+import com.example.chenwei.show.utils.StatusBarUtil;
 
 /**
  * Created by chenwei on 17/1/25.
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         init();
+        new StatusBarUtil().setStatusBarColor(this, R.color.loginStatus);
     }
 
     private void init() {
